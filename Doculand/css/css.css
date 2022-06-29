@@ -1,19 +1,42 @@
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 :root {
-    --blanco:#ffffff;
-    --oscuro:#1d3557;
-    --primary:#a8dadc;
-    --second:#457b9d;
-    --gris:#757575;
-    --grisclaro:#DFE9F3;
-    --warning:#e63946;
-    --tip:#ffb703;
-  
+  --blanco: #ffffff;
+  --oscuro: #1d3557;
+  --primary: #a8dadc;
+  --second: #457b9d;
+  --gris: #757575;
+  --grisclaro: #dfe9f3;
+  --warning: #e63946;
+  --tip: #ffb703;
 }
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Krub", sans-serif;
+  font-size: 16px; /*1rem = 10px*/
+}
+
+.titulo {
+  text-align: center;
+  font-size: 3.8rem;
+}
+.subtitulo {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 2.5rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.titulo span {
+  font-size: 2rem;
+}
+.slogan {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 1.9rem;
+  font-family: 'IBM Plex Sans', sans-serif; 
 }

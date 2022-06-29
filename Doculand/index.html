@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doculand- Documentos, Libros, ensayos, apuntes y más.</title>
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -12,13 +14,23 @@
       title="Doculand"
     />
     <!--Icono del Title-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,700&family=Krub:ital,wght@0,400;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="css/css.css" as="style" />
+    <!--Carga mas rapido la hoja de estilo externa-->
     <link rel="stylesheet" href="css/css.css" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="javaScript/header.js"></script>
   </head>
   <body>
     <header>
-      <h1>Marcos Aldahir Cuenca Gonzalez</h1>
+      <h1 class="titulo">
+        Marcos Aldahir Cuenca Gonzalez <span>Developer</span>
+      </h1>
     </header>
 
     <nav>
@@ -30,8 +42,8 @@
     </nav>
 
     <section>
-      <h2>Encuentra tus documentos</h2>
-      <h3>El mejor sitio para estudiantes</h3>
+      <h2 class="subtitulo">Encuentra tus documentos</h2>
+      <h3 class="slogan">El mejor sitio para estudiantes</h3>
       <p>Comienza a Buscar</p>
       <p>
         <!--Icono de buscar (svg)-->
