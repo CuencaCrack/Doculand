@@ -20,6 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,700&family=Krub:ital,wght@0,400;0,700;1,500&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preload" href="css/css.css" as="style" />
     <!--Carga mas rapido la hoja de estilo externa-->
     <link rel="stylesheet" href="css/css.css" />
@@ -33,38 +37,60 @@
       </h1>
     </header>
 
-    <nav>
-      <!--Barra de navegacion de un solo nivel-->
-      <a href="#">Inicio</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Clientes</a>
-      <a href="#">Contacto</a>
-    </nav>
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <!--Barra de navegacion de un solo nivel-->
+        <a href="#">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Clientes</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </div>
+    <!--Section de la imagen principal del index-->
+    <section class="hero">
+      <div class="contenido-hero">
+        <p class="subtitulo">Encuentra material de estudio</p>
+        <h3 class="slogan">
+          El mejor sitio para compartir documentos por estudiantes
+        </h3>
+        
+        <p>
+          <!--Icono de buscar (svg)-->
+        </p>
+        <div class="contenedor_search">
+          <div class="searchBar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-search"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="10" cy="10" r="7" />
+              <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
 
-    <section>
-      <h2 class="subtitulo">Encuentra tus documentos</h2>
-      <h3 class="slogan">El mejor sitio para estudiantes</h3>
-      <p>Comienza a Buscar</p>
-      <p>
-        <!--Icono de buscar (svg)-->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-search"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#2c3e50"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <circle cx="10" cy="10" r="7" />
-          <line x1="21" y1="21" x2="15" y2="15" />
-        </svg>
-      </p>
-      <a href="#">Buscar</a>
+            <form class="search">
+              <!--Será flex-->
+              <input
+                type="search"
+                placeholder="Buscar materias, libros o documentos"
+                data-hj-whitelist="true"
+                spellcheck="true"
+                class="search-bar-input-legacy"
+                value=""
+              />
+              <button type="submit" class="button_search">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <main>

@@ -14,8 +14,15 @@
 }
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
+  box-sizing: border-box; /*Con este comando el padding ya no afecta las dimensiones del box model*/
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Krub", sans-serif;
   font-size: 16px; /*1rem = 10px*/
@@ -28,8 +35,11 @@ body {
 .subtitulo {
   text-align: center;
   padding-top: 0.5rem;
-  font-size: 2.5rem;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 7.5rem;  
+  color: var(--blanco);
+  font-family: 'Roboto', sans-serif;
+  width: 700;
+  text-shadow: 2px 2px 2px var(--oscuro);
 }
 .titulo span {
   font-size: 2rem;
@@ -38,5 +48,108 @@ body {
   text-align: center;
   padding-top: 0.5rem;
   font-size: 1.9rem;
-  font-family: 'IBM Plex Sans', sans-serif; 
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--blanco);
+  text-shadow: 2px 2px 2px var(--oscuro);
+}
+
+/*CSS para la parte de la navegacion principal*/
+.nav-bg {
+  background-color: var(--primary);
+}
+.contenedor {
+  max-width: 120rem;
+  margin: auto;
+}
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  /*Cuando el navegador llega a 768px o menos */
+  .navegacion-principal {
+    flex-direction: row;
+  }
+}
+.navegacion-principal a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--oscuro);
+  font-weight: 700;
+}
+.navegacion-principal a:hover {
+  background-color: var(--blanco);
+  color: var(--gris);
+}
+/*Imagen del hero*/
+.hero {
+  background-image: url(../Images/index/rm347-porpla-02-a-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 65rem;
+
+  /* padding: 25rem;*/
+  position: relative; /*El padre debe tener posicion relativa para que el hijo se mueva libremente*/
+}
+
+.contenido-hero {
+  backdrop-filter: blur(3px); /*Aplica filtro a lo que está atras del elemento*/
+  position: absolute;
+  background-color: rgb(91 199 135 / 87%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*css de la barra de busqueda*/
+.button_search {
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.4286;
+  padding: 8px  13px ;
+  background-color: #0088d7;
+  border: 1px solid #0088d7;
+  color: #fff;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  
+}
+
+.contenedor_search {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  height: 62px;
+  width: 760px;
+  margin-top: 50px;
+  box-shadow: 0px 5px 5px var(--gris);
+  
+}
+.searchBar {
+  position: relative;
+  display: flex;
+  flex-direction: column;  
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+}
+.search {
+  position: absolute;
+  display: flex;
+  
+  height: 100%;
+  width: 100%;
+}
+.search input{
+margin: 0%;
+margin-left: 60px;
+width: 650px;
+height: 100%;
+border: 0;
 }
