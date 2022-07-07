@@ -26,6 +26,7 @@ html {
 body {
   font-family: "Krub", sans-serif;
   font-size: 16px; /*1rem = 10px*/
+  background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco));
 }
 
 .titulo {
@@ -35,18 +36,20 @@ body {
 .subtitulo {
   text-align: center;
   padding-top: 0.5rem;
-  font-size: 7.5rem;  
+  font-size: 7.5rem;
   color: var(--blanco);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 700;
   text-shadow: 2px 2px 2px var(--oscuro);
 }
+
 .titulo span {
   font-size: 2rem;
 }
 .slogan {
   text-align: center;
   padding-top: 0.5rem;
+  padding-bottom: 180px;
   font-size: 1.9rem;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--blanco);
@@ -58,8 +61,9 @@ body {
   background-color: var(--primary);
 }
 .contenedor {
-  max-width: 120rem;
+  max-width: 85%;
   margin: auto;
+  
 }
 .navegacion-principal {
   display: flex;
@@ -89,7 +93,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
+  margin-bottom: 2rem;
   height: 65rem;
 
   /* padding: 25rem;*/
@@ -99,7 +103,7 @@ body {
 .contenido-hero {
   backdrop-filter: blur(3px); /*Aplica filtro a lo que está atras del elemento*/
   position: absolute;
-  background-color: rgb(91 199 135 / 87%);
+  background-color: rgba(91, 199, 135, 0.87);
   width: 100%;
   height: 100%;
   display: flex;
@@ -113,43 +117,117 @@ body {
   border-radius: 10px;
   font-size: 16px;
   line-height: 1.4286;
-  padding: 8px  13px ;
+  padding: 8px 13px;
   background-color: #0088d7;
   border: 1px solid #0088d7;
   color: #fff;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-  
 }
+.boton:hover {
+  cursor: pointer;
+} 
 
-.contenedor_search {
-  background-color: var(--blanco);
-  border-radius: 10px;
-  height: 62px;
-  width: 760px;
-  margin-top: 50px;
-  box-shadow: 0px 5px 5px var(--gris);
-  
-}
-.searchBar {
-  position: relative;
-  display: flex;
-  flex-direction: column;  
-  width: 100%;
-  height: 100%;
-
-  justify-content: center;
-}
 .search {
   position: absolute;
   display: flex;
   
-  height: 100%;
-  width: 100%;
+  
+  justify-content: center;
+
+  background-color: var(--blanco);
+  border-radius: 10px;
+  height: 62px;
+  width: 760px;
+  margin-top: 130px;
+  box-shadow: 0px 5px 5px var(--gris);
 }
-.search input{
-margin: 0%;
-margin-left: 60px;
-width: 650px;
-height: 100%;
-border: 0;
+.search input {
+  margin: 0%;
+  margin-left: 60px;
+  width: 650px;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  
+  .search input {
+    width: auto;
+    margin-left: 0px;
+  }
+  .search {
+    margin-top: 100px;
+    width: auto;
+    
+  }
+  .titulo {
+    font-size: 2rem;
+  }
+  .subtitulo {
+    font-size: 3.8rem;
+  }
+  .slogan{
+    font-size: 1.8rem;
+    
+  }
+}
+@media (max-width: 760px){
+  .search input {
+    width: auto;
+    margin-left: 0px;
+  }
+  .search {
+    margin-top: 200px;
+    width: auto;
+    
+  }
+}
+
+/*Servicios*/
+.contenedor_servicios {
+  max-width: 85%;
+  margin: auto;
+  border-radius: 100px;
+  
+}
+.sombra {
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+/** Servicios **/
+@media (min-width: 768px) {
+  .servicios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
+  }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.servicio h3 {
+  color: var(--oscuro);
+  font-weight: normal;
+}
+.servicio p {
+  line-height: 2;
+  text-align: center;
+}
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+ /* background-color: #06d6a0;*/
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /*background-image: linear-gradient(to top, #06d6a0 0%, rgba(91, 199, 135));*/
+  background-image: linear-gradient(to top, var(--second) 0%, rgba(91, 199, 135));
 }
